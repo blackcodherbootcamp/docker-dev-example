@@ -28,7 +28,7 @@ const config = {
           pool.end();
         }
       } else {
-        pool.end();
+        setTimeout(seedDb, 2000);
       }
     }
   );
