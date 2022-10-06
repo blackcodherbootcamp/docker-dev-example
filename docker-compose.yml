@@ -1,5 +1,8 @@
 version: '3.8'
 services:
+  # These are the configurations for our React app
+  # When Docker Compose starts this container it will automatically
+  # use the Dockerfile in the directory to configure it
   my-app-frontend:
     build: ./frontend
     volumes:
@@ -12,6 +15,12 @@ services:
     # Needed to keep the container from exiting
     stdin_open: true
 
+  # These are the configurations for our Node app
+  # When Docker Compose starts this container it will automatically
+  # use the Dockerfile in the directory to configure it.
+  # Note the `my-app-backend` name is important, in our React app, when we
+  # refer to `"proxy": "http://my-app-backend:8080"` in package.json, that
+  # value is mapped on the network to the address and port of this container.
   my-app-backend:
     depends_on:
       - my-app-db
@@ -24,8 +33,12 @@ services:
     ports:
       - 8080:8080
 
+  # This is the configuration for our PostgreSQL database container
+  # Note the `my-app-db` name is important; in our Node app when we refer
+  # to `host: 'my-app-db'` in server.js, that value is mapped on the
+  # network to the address of this container.
   my-app-db:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     restart: always
     environment:
       POSTGRES_USER: example
