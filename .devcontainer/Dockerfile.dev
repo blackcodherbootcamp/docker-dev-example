@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-# [Choice] Node.js version: 14, 12, 10
+# [Choice] Node.js version: 16, 14, 12
 ARG VARIANT=16-bullseye
 FROM mcr.microsoft.com/devcontainers/typescript-node:${VARIANT}
 
