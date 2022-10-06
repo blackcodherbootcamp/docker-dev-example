@@ -11,7 +11,7 @@ const HOST = '0.0.0.0';
 const Pool = require('pg').Pool
 const config = {
   user: 'example',
-  host: 'db',
+  host: 'my-app-db',
   database: 'mydb',
   password: 'example',
   port: 5432,
