@@ -15,10 +15,24 @@
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
+    "adpyke.vscode-sql-formatter",
+    "burkeholland.simple-react-snippets",
     "dbaeumer.vscode-eslint",
+    "ecmel.vscode-html-css",
+    "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
+    "github.classroom",
+    "htmlhint.vscode-htmlhint",
+    "mongodb.mongodb-vscode",
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode-remote.remote-containers",
     "ms-vsliveshare.vsliveshare",
-    "ms-azuretools.vscode-docker"
+    "ms-vsonline.vsonline",
+    "ritwickdey.LiveServer",
+    "yzhang.markdown-all-in-one",
+    "Zignd.html-css-class-completion"
   ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // Left empty because this is handled by docker-compose for individual services,
